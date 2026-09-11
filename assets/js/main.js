@@ -23,7 +23,7 @@
       freeMode: true,
       watchSlidesProgress: true,
     });
-  
+
     const mainSwiper = new Swiper(".main-swiper", {
       spaceBetween: 10,
       navigation: {
@@ -48,32 +48,32 @@
     const select = document.querySelector('select[name="guest_number"]');
     const container = document.getElementById("guest-fields");
     const lang = select.dataset.lang;
-  
+
     select.addEventListener("change", function () {
       container.innerHTML = "";
-  
+
       const value = this.value;
-  
+
       if (!value || value === "0") return;
-  
+
       const number = parseInt(value);
-  
+
       for (let i = 1; i <= number; i++) {
         const group = document.createElement("div");
         group.className = "guest-group fade-in";
-  
+
         group.innerHTML = `
           <div class="form-group fade-in guest-name" data-animate="fade-in">
             <input
               type="text"
               id="guest-name"
               name="guest_name_${i}"
-              placeholder="${lang === "vi"? "Tên khách mời đi kèm": "Name of accompanying guest"}"
+              placeholder="${lang === "vi" ? "Tên khách mời đi kèm" : "Name of accompanying guest"}"
               required
             />
           </div>
         `;
-  
+
         container.appendChild(group);
       }
     });
@@ -83,43 +83,43 @@
        MUSIC
     ====================================================== */
 
-    function initMusic() {
-      const audio = qs("#audio");
-      const icon = qs("#iconSvg");
-      const btn = qs("#player-btn");
-      const label = qs("#musicLabel");
-  
-      let isOpen = true
-  
-      if (!audio || !icon || !btn || !label) return;
-  
-      // 👉 GSAP timeline cho label
-      const tl = gsap.timeline({ paused: true });
-  
-      tl.to(label, {
-        x: 200,
-        // opacity: 0,
-        duration: 1,
-        ease: "power2.inOut",
-         pointerEvents: "none"
-      });
-  
-      btn.addEventListener("click", () => {
-        if (!audio.src) return;
-        audio.paused ? audio.play() : audio.pause();
-  
-        // toggle label
-        if (isOpen) {
-          tl.play();
-        } else {
-          tl.reverse();
-        }
-        isOpen = !isOpen;
-      });
-  
-      audio.addEventListener("play", () => icon.classList.add("spin"));
-      audio.addEventListener("pause", () => icon.classList.remove("spin"));
-    }
+  function initMusic() {
+    const audio = qs("#audio");
+    const icon = qs("#iconSvg");
+    const btn = qs("#player-btn");
+    const label = qs("#musicLabel");
+
+    let isOpen = true
+
+    if (!audio || !icon || !btn || !label) return;
+
+    // 👉 GSAP timeline cho label
+    const tl = gsap.timeline({ paused: true });
+
+    tl.to(label, {
+      x: 200,
+      // opacity: 0,
+      duration: 1,
+      ease: "power2.inOut",
+      pointerEvents: "none"
+    });
+
+    btn.addEventListener("click", () => {
+      if (!audio.src) return;
+      audio.paused ? audio.play() : audio.pause();
+
+      // toggle label
+      if (isOpen) {
+        tl.play();
+      } else {
+        tl.reverse();
+      }
+      isOpen = !isOpen;
+    });
+
+    audio.addEventListener("play", () => icon.classList.add("spin"));
+    audio.addEventListener("pause", () => icon.classList.remove("spin"));
+  }
 
   /* ======================================================
        DRESSCODE ANIMATION
@@ -144,7 +144,7 @@
   }
 
   function initPage() {
-    const tl = gsap.timeline({ paused: true});
+    const tl = gsap.timeline({ paused: true });
     // const audio = document.querySelector("#audio");
     tl.fromTo(
       ".flap",
@@ -159,49 +159,49 @@
         ease: "power2.inOut",
       }
     )
-    .to(".flap-shadow",{
-      x:-100,
-      y: 20,
-      opacity:0.4,
-      scaleX:1.3,
-      filter: "blur(40px)",
-      duration:1.5
-    },"<")
-    .to(".seal-shadow",{
-      x:-100,
-      y: 20,
-      opacity:0.4,
-      scaleX:1.3,
-      filter: "blur(40px)",
-      duration:1.5
-    },"<")
-    .to(".letter-section", {
-      opacity: 0,
-      duration: 0.8
-    })
-    .set(".letter-section", { display: "none" })
-    .set(".container .content", { opacity: 0 })
-    .set(".container", { display: "block" })
-    .to(".container", {
-      opacity: 1,
-      onComplete: () => {
+      .to(".flap-shadow", {
+        x: -100,
+        y: 20,
+        opacity: 0.4,
+        scaleX: 1.3,
+        filter: "blur(40px)",
+        duration: 1.5
+      }, "<")
+      .to(".seal-shadow", {
+        x: -100,
+        y: 20,
+        opacity: 0.4,
+        scaleX: 1.3,
+        filter: "blur(40px)",
+        duration: 1.5
+      }, "<")
+      .to(".letter-section", {
+        opacity: 0,
+        duration: 0.8
+      })
+      .set(".letter-section", { display: "none" })
+      .set(".container .content", { opacity: 0 })
+      .set(".container", { display: "block" })
+      .to(".container", {
+        opacity: 1,
+        onComplete: () => {
 
-        // 💥 Reset ScrollTrigger
-        // ScrollTrigger.refresh();
+          // 💥 Reset ScrollTrigger
+          // ScrollTrigger.refresh();
 
-        // 💥 Nếu cần reset toàn bộ animation
-        // gsap.globalTimeline.clear();
+          // 💥 Nếu cần reset toàn bộ animation
+          // gsap.globalTimeline.clear();
 
-        // 💥 Re-init animation cho container
-        initAnimations();
-        // initDresscodeAnimation();
-        // initTimeline();
-        initCircleText();
+          // 💥 Re-init animation cho container
+          initAnimations();
+          // initDresscodeAnimation();
+          // initTimeline();
+          initCircleText();
 
-        ScrollTrigger.refresh();
-        
-      }
-    });
+          ScrollTrigger.refresh();
+
+        }
+      });
 
     document.getElementById("open-card").addEventListener("click", (e) => {
       // if (audio && audio.paused) {
@@ -210,7 +210,7 @@
       //   });
       // }
       tl.play();
-    }); 
+    });
   }
 
   function initLetterAnimation() {
@@ -565,13 +565,13 @@
       dietary: formData.getAll("dietary")
     }
 
-    
+
     // if (data.dietary.length) {
     //   data.dietary = data.dietary.join(", ");
     // } else {
     //   data.dietary = "";
     // }
-    
+
     const {
       name,
       confirm,
@@ -629,7 +629,7 @@
     // if (timeline === "v2") {
     //   sheetURL = SHEET_ENDPOINTS.not_vow
     // }
-    const sheetURL = 'https://script.google.com/macros/s/AKfycby68akClaB4Tpvh8kaSTHwnZIKK5n5hJj5KLom1pBjEHyjJynfMVyf1ubrpm29PpE0n/exec?sheet=confirm';
+    const sheetURL = '/exec?sheet=confirm';
 
     try {
       const res = await fetch(sheetURL, {
@@ -762,7 +762,7 @@
       if (hour) {
         hour.textContent = "18:00"
       }
-      if(welcomeTime) {
+      if (welcomeTime) {
         welcomeTime.textContent = "18:00"
       }
     }
