@@ -353,7 +353,7 @@ section {
 .cover .content .photo-frame {
   max-width: 250px;
   width: 100%;
-  aspect-ratio: 2/2.5;
+  aspect-ratio: 2/3;
   perspective: 1000px;
   margin: 5% 0;
 }
