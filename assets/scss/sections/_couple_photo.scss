@@ -1,0 +1,49 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.couple-photo {
+    width: 100%;
+
+    .content {
+        width: 100%;
+        min-height: 390px;
+        @include flex-center;
+        padding: 7% 0;
+        perspective: 1000px;
+
+        .container-photo {
+            width: 100%;
+            max-width: 297px;
+            aspect-ratio: 297 / 382;
+            position: relative;
+            @include flex-center;
+            // background-color: $primary-color;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .overlay {
+                position: absolute;
+                bottom: 60px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                img {
+                    width: 116px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 500px) {
+        .content {
+            .container-photo {
+                max-width: calc((297 / 500) * 100vw);
+            }
+        }
+    }
+}
