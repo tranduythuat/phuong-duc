@@ -22,8 +22,8 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(to bottom,
-                    rgba(0, 0, 0, 0.096),
-                    rgba(0, 0, 0, 0.201)),
+                    rgba(0, 0, 0, 0.17),
+                    rgba(0, 0, 0, 0.3)),
                 url('../../assets/images/end_couple.webp') no-repeat center/cover;
             filter: blur(8px);
             z-index: 0;
@@ -49,14 +49,35 @@
                 text-transform: uppercase;
             }
 
-            img {
-                display: block;
-                max-width: 208px;
+            .qr-box {
+                padding: 5%;
+                display: flex;
+                justify-content: center;
+                gap: 10%;
                 width: 100%;
-                aspect-ratio: 1;
-                background-color: $secondary-color;
-                margin: 5% 0;
+
+                .column {
+                    @include flex-center;
+                    flex-direction: column;
+
+                    img {
+                        display: block;
+                        max-width: 148px;
+                        width: 100%;
+                        aspect-ratio: 1;
+                        background-color: $secondary-color;
+                        margin: 5% 0 2%;
+                        border-radius: 5px;
+                    }
+
+                    .qr-info {
+                        font-size: 14px;
+                        margin-bottom: 5%;
+                    }
+                }
             }
+
+
         }
 
         p.thanks {
@@ -86,9 +107,19 @@
             }
 
             .qr {
-                img {
-                    max-width: calc((208 / 500) * 100vw);
+                .qr-box {
+                    .column {
+                        img {
+                            max-width: calc((148 / 500) * 100vw);
+                            border-radius: calc((5 / 500) * 100vw);
+                        }
+
+                        .qr-info {
+                            font-size: calc((14 / 500) * 100vw);
+                        }
+                    }
                 }
+
             }
 
             p.credits {

@@ -1484,7 +1484,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.096), rgba(0, 0, 0, 0.201)), url("../../assets/images/end_couple.webp") no-repeat center/cover;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.17), rgba(0, 0, 0, 0.3)), url("../../assets/images/end_couple.webp") no-repeat center/cover;
   filter: blur(8px);
   z-index: 0;
 }
@@ -1507,13 +1507,31 @@ section {
 .footer .content .qr p {
   text-transform: uppercase;
 }
-.footer .content .qr img {
+.footer .content .qr .qr-box {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  width: 100%;
+}
+.footer .content .qr .qr-box .column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .content .qr .qr-box .column img {
   display: block;
-  max-width: 208px;
+  max-width: 148px;
   width: 100%;
   aspect-ratio: 1;
   background-color: #f2ebd8;
-  margin: 5% 0;
+  margin: 5% 0 2%;
+  border-radius: 5px;
+}
+.footer .content .qr .qr-box .column .qr-info {
+  font-size: 14px;
+  margin-bottom: 5%;
 }
 .footer .content p.thanks {
   padding: 0 8%;
@@ -1535,8 +1553,12 @@ section {
   .footer .content .logo img {
     width: 16vw;
   }
-  .footer .content .qr img {
-    max-width: 41.6vw;
+  .footer .content .qr .qr-box .column img {
+    max-width: 29.6vw;
+    border-radius: 1vw;
+  }
+  .footer .content .qr .qr-box .column .qr-info {
+    font-size: 2.8vw;
   }
   .footer .content p.credits {
     font-size: 4vw;
