@@ -343,6 +343,7 @@ section {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.096), rgba(0, 0, 0, 0.201)), url("../../assets/images/hero_bg.webp") no-repeat center/cover;
   filter: blur(5px);
   z-index: 0;
+  transform: scale(1.1);
 }
 .cover .content .names {
   font-family: "UVNBUCTHU", sans-serif;
@@ -1484,8 +1485,9 @@ section {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.17), rgba(0, 0, 0, 0.3)), url("../../assets/images/end_couple.webp") no-repeat center/cover;
-  filter: blur(8px);
+  filter: blur(4px);
   z-index: 0;
+  transform: scale(1.1);
 }
 .footer .content .logo {
   width: 100%;
