@@ -5,10 +5,10 @@
     width: 100%;
 
     .content {
-        background: url('../../assets/images/bg/bg1.png') no-repeat center / contain;
+        background: url('../../assets/images/bg/bg1.png') no-repeat 50% 100% / 95%;
         width: 100%;
         max-width: 500px;
-        aspect-ratio: 500 / 2445;
+        aspect-ratio: 500 / 2331;
         position: relative;
         box-sizing: border-box;
         display: flex;
@@ -24,7 +24,7 @@
             align-items: center;
 
             .logo {
-                padding: 22% 0 7%;
+                padding: 20% 0 7%;
                 perspective: 500px;
 
                 img {
@@ -163,7 +163,7 @@
                 max-width: 228px;
                 width: 100%;
                 aspect-ratio: 1 / 1.3;
-                background: url('../../assets/images/couple_01.png') no-repeat center / cover;
+                background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/phuong-duc/couple_01.png') no-repeat center / cover;
             }
         }
 
