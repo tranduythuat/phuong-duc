@@ -5,10 +5,10 @@
     width: 100%;
 
     .content {
-        background: url('../../assets/images/bg/bg_01.png') no-repeat center / contain;
+        background: url('../../assets/images/bg/bg1.png') no-repeat center / contain;
         width: 100%;
         max-width: 500px;
-        aspect-ratio: 500 / 2310;
+        aspect-ratio: 500 / 2445;
         position: relative;
         box-sizing: border-box;
         display: flex;
@@ -24,11 +24,11 @@
             align-items: center;
 
             .logo {
-                padding: 20% 0 12%;
+                padding: 22% 0 7%;
                 perspective: 500px;
 
                 img {
-                    max-width: 80px;
+                    max-width: 164px;
                     width: 100%;
                     height: auto;
                 }
@@ -247,7 +247,7 @@
             .invitation {
                 .logo {
                     img {
-                        max-width: calc((80 / 500) * 100vw);
+                        max-width: calc((164 / 500) * 100vw);
                     }
                 }
 

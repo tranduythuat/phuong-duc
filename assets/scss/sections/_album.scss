@@ -8,13 +8,13 @@
     &-style .img-box-top {
         max-width: 100%;
         width: 100%;
-        aspect-ratio: 10 / 2.5;
-        background-color: $primary-color;
+        aspect-ratio: 500 / 143;
+        // background-color: $primary-color;
         overflow: hidden;
-        background-image: url('../../assets/images/oflove/4.webp');
+        background-image: url('../../assets/images/oflove/film.png');
         background-repeat: no-repeat;
-        background-size: 125%;
-        background-position: 100% 61%;
+        background-size: 100%;
+        background-position: center;
     }
 
     .highlight {

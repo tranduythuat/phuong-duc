@@ -401,10 +401,10 @@ section {
   width: 100%;
 }
 .intro .content {
-  background: url("../../assets/images/bg/bg_01.png") no-repeat center/contain;
+  background: url("../../assets/images/bg/bg1.png") no-repeat center/contain;
   width: 100%;
   max-width: 500px;
-  aspect-ratio: 500/2310;
+  aspect-ratio: 500/2445;
   position: relative;
   box-sizing: border-box;
   display: flex;
@@ -420,11 +420,11 @@ section {
   align-items: center;
 }
 .intro .content .invitation .logo {
-  padding: 20% 0 12%;
+  padding: 22% 0 7%;
   perspective: 500px;
 }
 .intro .content .invitation .logo img {
-  max-width: 80px;
+  max-width: 164px;
   width: 100%;
   height: auto;
 }
@@ -590,7 +590,7 @@ section {
 }
 @media (max-width: 500px) {
   .intro .content .invitation .logo img {
-    max-width: 16vw;
+    max-width: 32.8vw;
   }
   .intro .content .invitation .family-info img {
     width: 3.2vw;
@@ -1100,13 +1100,12 @@ section {
 .album-style .img-box-top {
   max-width: 100%;
   width: 100%;
-  aspect-ratio: 10/2.5;
-  background-color: #806331;
+  aspect-ratio: 500/143;
   overflow: hidden;
-  background-image: url("../../assets/images/oflove/4.webp");
+  background-image: url("../../assets/images/oflove/film.png");
   background-repeat: no-repeat;
-  background-size: 125%;
-  background-position: 100% 61%;
+  background-size: 100%;
+  background-position: center;
 }
 .album .highlight {
   width: 100%;
@@ -1494,7 +1493,7 @@ section {
   margin-bottom: 10%;
 }
 .footer .content .logo img {
-  width: 80px;
+  width: 142px;
   height: auto;
   object-fit: cover;
 }
@@ -1552,7 +1551,7 @@ section {
 }
 @media (max-width: 500px) {
   .footer .content .logo img {
-    width: 16vw;
+    width: 28.4vw;
   }
   .footer .content .qr .qr-box .column img {
     max-width: 29.6vw;

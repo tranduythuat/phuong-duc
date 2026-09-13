@@ -35,7 +35,7 @@
             margin-bottom: 10%;
 
             img {
-                width: 80px;
+                width: 142px;
                 height: auto;
                 object-fit: cover;
             }
@@ -103,7 +103,7 @@
         @media (max-width: 500px) {
             .logo {
                 img {
-                    width: calc((80 / 500) * 100vw);
+                    width: calc((142 / 500) * 100vw);
                 }
             }
 
