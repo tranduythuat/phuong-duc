@@ -1284,17 +1284,17 @@ section {
 }
 .rsvp .button-group {
   display: flex;
-  gap: 5%;
-  margin-bottom: 3%;
+  flex-direction: column;
+  margin-bottom: 10%;
 }
 .rsvp .label-confirm {
   font-size: 12px;
   text-transform: uppercase;
   margin-bottom: 3%;
-  margin-top: 5%;
 }
 .rsvp .radio-input {
   display: none;
+  margin-bottom: 2%;
 }
 .rsvp .btn {
   flex: 1;
@@ -1314,6 +1314,7 @@ section {
   align-items: center;
   text-align: center;
   background-color: #fff;
+  margin-top: 2%;
 }
 .rsvp .btn-yes {
   background: transparent;
@@ -1330,6 +1331,7 @@ section {
 }
 .rsvp .btn-no {
   color: #806331;
+  background: transparent;
 }
 .rsvp .btn-no:hover {
   background: #806331;
@@ -1349,13 +1351,14 @@ section {
   padding: 1% 4% 1.8%;
   line-height: 1;
   border: 1px solid #806331;
-  font-family: inherit;
   border-radius: 25px;
   font-size: 13px;
   color: #806331;
-  background: #fff;
+  background: transparent;
   transition: all 0.3s ease;
   font-weight: 600;
+  font-family: "iCielBCOldStyle", sans-serif;
+  font-weight: 300;
 }
 .rsvp input:focus,
 .rsvp textarea:focus {
@@ -1376,10 +1379,10 @@ section {
   border-radius: 20px;
   font-size: 12px;
   aspect-ratio: 3/1;
-  padding-top: 14%;
+  padding-top: 4%;
 }
 .rsvp .form-select {
-  font-family: inherit;
+  font-family: "iCielBCOldStyle", sans-serif;
   width: 100%;
   padding: 2.2% 4%;
   line-height: 1;
@@ -1399,7 +1402,7 @@ section {
   background-size: 9px;
   padding-right: 45px;
   cursor: pointer;
-  background-color: #fff;
+  background-color: transparent;
 }
 .rsvp .submit-btn {
   width: 40%;

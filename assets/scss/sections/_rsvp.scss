@@ -39,19 +39,19 @@
 
     .button-group {
         display: flex;
-        gap: 5%;
-        margin-bottom: 3%;
+        flex-direction: column;
+        margin-bottom: 10%;
     }
 
     .label-confirm {
         font-size: 12px;
         text-transform: uppercase;
         margin-bottom: 3%;
-        margin-top: 5%;
     }
 
     .radio-input {
         display: none;
+        margin-bottom: 2%;
     }
 
     .btn {
@@ -73,6 +73,7 @@
         align-items: center;
         text-align: center;
         background-color: #fff;
+        margin-top: 2%;
     }
 
     .btn-yes {
@@ -92,8 +93,8 @@
     }
 
     .btn-no {
-
         color: $primary-color;
+        background: transparent;
     }
 
     .btn-no:hover {
@@ -118,13 +119,14 @@
         padding: 1% 4% 1.8%;
         line-height: 1;
         border: 1px solid $primary-color;
-        font-family: inherit;
         border-radius: 25px;
         font-size: 13px;
         color: $primary-color;
-        background: #fff;
+        background: transparent;
         transition: all 0.3s ease;
         font-weight: 600;
+        font-family: $font-main;
+        font-weight: 300;
     }
 
     input:focus,
@@ -149,12 +151,12 @@
         border-radius: 20px;
         font-size: 12px;
         aspect-ratio: 3 / 1;
-        padding-top: 14%;
+        padding-top: 4%;
 
     }
 
     .form-select {
-        font-family: inherit;
+        font-family: $font-main;
         width: 100%;
         padding: 2.2% 4%;
         line-height: 1;
@@ -174,7 +176,7 @@
         background-size: 9px;
         padding-right: 45px;
         cursor: pointer;
-        background-color: #fff;
+        background-color: transparent;
     }
 
     .submit-btn {
